@@ -1,0 +1,35 @@
+def add(num1, num2):
+    sum = num1 + num2
+    return sum
+
+result = add(2,4)
+
+
+------------------------
+
+def exclamify(text):
+    start_exclaim = "¡"
+    end_exclaim = "!"
+    return start_exclaim + text + end_exclaim
+
+exclamify("the snails are eating my lupines")
+
+------------------------
+
+start_exclaim = "¡"
+end_exclaim = "❣️"
+
+def exclamify(text):
+    return start_exclaim + text + end_exclaim
+
+exclamify("the voles are digging such holes")
+
+------------------------
+
+def exclamify(text):
+    end_exclaim = "⁉️️️"
+    return start_exclaim + text + end_exclaim
+
+exclamify("the voles are digging such holes")
+
+------------------------
