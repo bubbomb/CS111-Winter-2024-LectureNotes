@@ -1,2 +1,7 @@
 
 Need classes code from slides.
+
+
+class == blueprints or a stamp
+instance == the actual thing made
+
