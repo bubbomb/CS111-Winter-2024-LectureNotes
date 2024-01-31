@@ -1,12 +1,16 @@
 # Define a new type of data
-class Product:
+class Chocolate:
 
+    name = 'Seth bar'
+    scratch = 'Seth'
+    price = 100.00
+    nutrition_info = ''
+    inventory = 0
     # Set the initial values
     def __init__(self, name, price, nutrition_info):
         self.name = name
         self.price = price
         self.nutrition_info = nutrition_info
-        self.inventory = 0
 
     # Define methods
     def increase_inventory(self, amount):
@@ -23,19 +27,32 @@ class Product:
             return "There are no bars!"
         return f"There are {self.inventory} bars."
 
-    def get_total_price(self, quantity):
-        return (self.price * (1 + self.sales_tax)) * quantity
-
-    sales_tax = 0.07
+    def purchase(self):
+        pass
 
 
-pina_bar = Product("Piña Chocolotta", 7.99,
+    # def get_total_price(self, quantity):
+    #     return (self.price * (1 + self.sales_tax)) * quantity
+
+    # sales_tax = 0.07
+
+pina_bar = Chocolate("Piña Chocolotta", 7.99,
     ["200 calories", "24 g sugar"])
-truffle_bar = Product("Truffalapagus", 9.99,
+truffle_bar = Chocolate("Truffalapagus", 9.99,
     ["170 calories", "19 g sugar"])
 
-print(pina_bar.sales_tax)
-print(truffle_bar.sales_tax)
-print(pina_bar.get_total_price(4))
-print(truffle_bar.get_total_price(4))
+print(pina_bar.get_label())
+print(truffle_bar.get_label())
+
+pina_bar.scratch = 'Seth'
+
+print(getattr(pina_bar, 'scratch'))
+all_chocolates = [pina_bar, truffle_bar]
+
+for chocolate in all_chocolates:
+    chocolate.get_label()
+# print(pina_bar.sales_tax)
+# print(truffle_bar.sales_tax)
+# print(pina_bar.get_total_price(4))
+# print(truffle_bar.get_total_price(4))
 
