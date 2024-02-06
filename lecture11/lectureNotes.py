@@ -22,3 +22,5 @@ print(Rational(1, 2) + Rational(3, 4))
 
 print(str(Rational(3,4)))
 print(str(1))
+
+bool(dumbo)

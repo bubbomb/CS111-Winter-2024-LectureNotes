@@ -10,9 +10,6 @@ class Food:
 broccoli = Food("Broccoli Rabe", "veggies", 20)
 bone_marrow = Food("Bone Marrow", "meat", 100)
 
-print(broccoli)
-print(bone_marrow)
-
 class Organism:
     def play(self):
         pass
