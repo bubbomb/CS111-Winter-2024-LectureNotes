@@ -1,2 +1,4 @@
 
 /lecture-env
+pycache
+*.pyc
