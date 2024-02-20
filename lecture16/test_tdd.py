@@ -30,10 +30,13 @@ def test_add_3_10():
     assert add(3,10) == 13
 
 def test_add_floats():
-    assert add(0.625, 0.126) == 0.751
+    assert add(0.1, 0.2) == pytest.approx(0.3)
 
 def test_add_3_nums():
     assert add(1,1,1) == 3
+
+def test_add_3_floats():
+    assert add(0.1, 0.1, 0.1) == pytest.approx(0.3)
 
 def test_add_4_nums():
     assert add(1,1,1,1) == 4
@@ -69,3 +72,6 @@ def test_factorial_4():
 
 def test_factorial_5():
     assert factorial(5) == 5 * 4 * 3 * 2 * 1
+
+def test_factorial_0():
+    assert factorial(0) == 1

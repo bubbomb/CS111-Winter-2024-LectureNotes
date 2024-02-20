@@ -30,3 +30,8 @@ def factorial(x):
         total *= prev_number
         prev_number += 1
     return total
+
+
+    # if x == 0:
+    #     return 1
+    # return x * factorial(x-1)
