@@ -35,5 +35,5 @@ def luhn_sum_double(n):
         return luhn_digit + luhn_sum(all_but_last)
 
 
-print(luhn_sum(62))
+print(luhn_sum())
 print(luhn_sum(5105105105105100))
