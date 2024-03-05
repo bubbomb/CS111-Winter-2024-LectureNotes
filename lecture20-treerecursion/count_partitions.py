@@ -5,6 +5,8 @@ def count_partitions(num, max_size_partition, counter=[0]):
     print(counter)
 
 
+    # if max_size_partition == 0:
+    #     return 0
     if max_size_partition <= 1:
         return max_size_partition
 

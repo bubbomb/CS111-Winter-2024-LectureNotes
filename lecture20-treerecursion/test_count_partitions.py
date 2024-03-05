@@ -1,7 +1,7 @@
 from count_partitions import count_partitions
 
-# def test_count_partitions_fail():
-#     assert count_partitions(15, 6) == 3
+def test_count_partitions_fail():
+    assert count_partitions(50, 6) == 3
 
 def test_count_partitions_1_0():
     assert count_partitions(1,0) == 0

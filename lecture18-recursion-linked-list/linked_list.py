@@ -22,6 +22,25 @@ class Link:
         return string + str(self.first) + '>'
 
 
+cars  = Link('cars1')
+print(cars)
+print(cars.rest)
+
+cars2 = Link('cars2')
+
+
+cars_franchise = Link('cars1', Link('cars2', Link('cars3', Link('planes', Link('Turbo')))))
+cars2.rest = cars_franchise
+print(cars_franchise)
+
+cars.rest = cars2
+
+print(cars)
+
+print(cars_franchise.rest.rest.rest.rest.rest)
+
+
+
 def range_link(start, end):
     """Return a Link containing consecutive integers
     from start to end, not including end.
@@ -33,4 +52,13 @@ def range_link(start, end):
     return Link(start, range_link(start + 1, end))
 
 
-range_link(3,6)
+some_links = range_link(3,6)
+
+# print(some_links)
+
+
+s = Link("A", Link("B", Link("C")))
+t = s.rest
+t.rest = s
+
+print(t.rest.rest.rest.rest)
