@@ -53,27 +53,28 @@ def cache_virfib(n, cache={}):
    
 
 import timeit
-print('------------------------------------------------------')
+# print('------------------------------------------------------')
 # print('------------ exp -------------')
-# num = 1
-# exponent = 150
+# num = 3
+# exponent = 102
 
 # print(f'num:{num}, exponent:{exponent}')
-# print(timeit.timeit(f'exp({num},{exponent})', globals=globals(), number=10000))
 # print(timeit.timeit(f'exp_fast({num},{exponent})', globals=globals(), number=10000))
+# print(timeit.timeit(f'exp({num},{exponent})', globals=globals(), number=10000))
 
 # print()
 # print('------------ overlap -------------')
 
 
-# list2 = [x for x in range(10)]
-# list1 = [x for x in range(10)]
+# list2 = [x for x in range(500)]
+# list1 = [x for x in range(100)]
 
 # print(timeit.timeit(f'overlap({list1}, {list2})', globals=globals(), number=1000))
 
 print('------------ virfib -------------')
 
-virfib_num = 30
+virfib_num = 200
 
-print(timeit.timeit(f'virfib({virfib_num})', globals=globals(), number=1))
-print(timeit.timeit(f'cache_virfib({virfib_num})', globals=globals(), number=1))
+print(virfib_num)
+print(timeit.timeit(f'cache_virfib({virfib_num})', globals=globals(), number=1000))
+print(timeit.timeit(f'virfib({virfib_num})', globals=globals(), number=1000))
